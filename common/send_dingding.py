@@ -11,9 +11,9 @@ def send_ding(message):
         },
         "at": {
             "atMobiles": [
-                "15986303396"  # 如果需要@某人，这里写他的手机号 与at 所有人不可同时用
+                "18620101998"  # 如果需要@某人，这里写他的手机号 与at 所有人不可同时用
             ],
-            # "isAtAll": 1  # 如果需要@所有人，这些写1
+            # "isAtAll": 1  # 如果需要@所有人，值为1
         }
     }
     headers = {
@@ -26,7 +26,7 @@ def send_ding(message):
         return False
 
 
-def send_ding_to_url(message, file_url):
+def send_ding_url(message, file_url):
     url = "https://oapi.dingtalk.com/robot/send?access_token=91a1f571187a08969a787ba29443c709c42ab62e10e4d30e5793d9c4387aeec8"
     String_textMsg = {
         "msgtype": "markdown",
