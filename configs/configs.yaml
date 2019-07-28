@@ -1,0 +1,9 @@
+HTTP:
+  host: localhost
+  port: 9999
+DB_Config:
+  host: host
+  port: port
+  user: user
+  pwd: passwd
+  database: db
