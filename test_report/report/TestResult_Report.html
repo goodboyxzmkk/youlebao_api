@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>游乐宝_Web自动化测试报告</title>
+    <title>游乐宝_接口自动化测试报告</title>
     <meta name="generator" content="HTMLTestRunner 0.8.3"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -419,10 +419,10 @@ function hide_img(obj){
 }
 </script>
 <div class='heading'>
-<h1>游乐宝_Web自动化测试报告</h1>
-<p class='attribute'><strong>开始时间:</strong> 2019-07-26 18:35:49</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:00.039427</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>:2 <span class="tj failCase">Failure</span>:1 <span class="tj">通过率</span>:66.7%</p>
+<h1>游乐宝_接口自动化测试报告</h1>
+<p class='attribute'><strong>开始时间:</strong> 2019-07-28 18:52:26</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:00.096820</p>
+<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>:3 <span class="tj">通过率</span>:100.0%</p>
 
 <p class='description'>用例执行情况:</p>
 </div>
@@ -435,9 +435,9 @@ function hide_img(obj){
 </div>
 
 <div id='show_detail_line' style=" float: left;  width: 100%;">
-<a class="abstract detail_button" href='javascript:showCase(0,1)'>概要[66.67%]</a>
-<a class="passed  detail_button" href='javascript:showCase(1,1)'>通过[2]</a>
-<a class="failed  detail_button" href='javascript:showCase(2,1)'>失败[1]</a>
+<a class="abstract detail_button" href='javascript:showCase(0,1)'>概要[100.00%]</a>
+<a class="passed  detail_button" href='javascript:showCase(1,1)'>通过[3]</a>
+<a class="failed  detail_button" href='javascript:showCase(2,1)'>失败[0]</a>
 <a class="errored  detail_button" href='javascript:showCase(3,1)'>错误[0]</a>
 <a class="skiped  detail_button"  href='javascript:showCase(4,1)'>跳过[0]</a>
 <a class="all detail_button" href='javascript:showCase(5,1)'>所有[3]</a>
@@ -463,46 +463,40 @@ function hide_img(obj){
     <th>错误截图</th>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>test_interface.test_leaguer_level_case.Test_Leaguer_Level_Case</td>
     <td>1</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1.1',1)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='ft1.1.1' class='none'>
+<tr id='pt1.1.1' class='hiddenRow'>
     <td ><div class='testcase'>test_leaguer_level_001_1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <span class='status failCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1.1')" >
-        失败</a></span>
+    <span class='status passCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.1')" >
+        通过</a></span>
 
-    <div id='div_ft1.1.1' class="popup_window">
+    <div id='div_pt1.1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1.1: ============【Test_Leaguer_Level_Case测试用例开始】====================
+pt1.1.1: ============【Test_Leaguer_Level_Case测试用例开始】====================
 请求方法：post
 请求url：http://localhost:9999/Leaguer/DTOAddLeaguerLevel
 请求头：{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
 请求参数：{'LevelName': 'autoTest级别', 'RejoinMoney': '11', 'ChangeMoney': '33', 'SupplementCardMoney': '22', 'HeapcentlExpireTime': '1', 'IsMayUnjoin': 'true', 'UnJoinRate': '0', 'Summary': '', 'SecSupplementCardSujestPrice': '0.00', 'IsAllowEditSecSupplementPrice': 'true', 'SecChangeCardSujestPrice': '0.00', 'IsAllowEditSecChangePrice': 'true', 'SecCardPrice': '0.00', 'IsAllowEditSecCardPrice': 'true', 'IsSaveSecCardInfo': '', 'VerifyTimeUnit': '1', 'FreeMoneyExpireUnit': '', 'HeapcentlExpireUnit': '4', 'ID': '', 'CardType': '0', 'JoinCardType': '0'}
-响应信息:{"ResponseStatus":{"ErrorCode":"1003","Message":"该会员级别已经存在，请重新输入！"}}
-【用例运行时长】: 0.00945735999999997秒
+响应信息:{"ResponseStatus":{"ErrorCode":"0"}}
+【用例运行时长】: 0.06849688500000001秒
 ====================【Test_Leaguer_Level_Case测试用例结束】====================
-Traceback (most recent call last):
-  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Programs\youlebao_api\test_interface\test_leaguer_level_case.py", line 22, in test_leaguer_level_001
-    assert json.loads(self.result.text) == eval(data['response'])
-AssertionError
 
 
         </pre>
@@ -547,8 +541,8 @@ pt1.2.1: ============【Test_Login_Case测试用例开始】====================
 响应信息:{"ResponseStatus":{"ErrorCode":"0"}}
 实际结果：{'ResponseStatus': {'ErrorCode': '0'}}
 预期结果：{'ResponseStatus': {'ErrorCode': '0'}}
-更新cookies:&lt;RequestsCookieJar[&lt;Cookie ss-id=iCtb96XZwdBmdKmRpD7Z for localhost.local/&gt;, &lt;Cookie ss-pid=TlxYZa3kFOb3pqcbvjhv for localhost.local/&gt;]&gt;
-【用例运行时长】: 0.023137193999999972秒
+更新cookies:&lt;RequestsCookieJar[&lt;Cookie ss-id=sQTOypex7Nm9QItWtQzB for localhost.local/&gt;, &lt;Cookie ss-pid=4kEMbekvVXvLKDFxM2D3 for localhost.local/&gt;]&gt;
+【用例运行时长】: 0.02225328700000001秒
 ====================【Test_Login_Case测试用例结束】====================
 
 
@@ -584,7 +578,7 @@ pt1.2.2: ============【Test_Login_Case测试用例开始】====================
 响应信息:{"ResponseStatus":{"ErrorCode":"90002","Message":"用户密码错误"}}
 实际结果：{'ResponseStatus': {'ErrorCode': '90002', 'Message': '用户密码错误'}}
 预期结果：{'ResponseStatus': {'ErrorCode': '90002', 'Message': '用户密码错误'}}
-【用例运行时长】: 0.005529656999999966秒
+【用例运行时长】: 0.005447136999999991秒
 ====================【Test_Login_Case测试用例结束】====================
 
 
@@ -599,8 +593,8 @@ pt1.2.2: ============【Test_Login_Case测试用例开始】====================
 <tr id='total_row'>
     <th>统计</th>
     <th>3</th>
-    <th>2</th>
-    <th>1</th>
+    <th>3</th>
+    <th>0</th>
     <th>0</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
@@ -608,7 +602,7 @@ pt1.2.2: ============【Test_Login_Case测试用例开始】====================
 </table>
 <script>
     showCase(0,1);
-    drawCircle('circle1',2, 1, 0);
+    drawCircle('circle1',3, 0, 0);
 </script>
 
 <div id='ending'>&nbsp;</div>
