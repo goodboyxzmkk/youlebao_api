@@ -7,13 +7,12 @@ class B(unittest.TestCase):
     def setUpClass(cls):
         B.dr = webdriver.Chrome()
 
-    def get_screenshot_as_file(func):
+    def get_screenshot_as_file(self, func):
         def wrapper(self):
             try:
                 func(self)
             except:
-                self.dr.get_screenshot_as_file('./{}.png'.format(
-                    func.__name__))
+                self.dr.get_screenshot_as_file('./{}.png'.format(func.__name__))
 
         return wrapper
 

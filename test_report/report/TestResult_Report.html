@@ -420,8 +420,8 @@ function hide_img(obj){
 </script>
 <div class='heading'>
 <h1>游乐宝_接口自动化测试报告</h1>
-<p class='attribute'><strong>开始时间:</strong> 2019-07-29 14:56:56</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:00.071851</p>
+<p class='attribute'><strong>开始时间:</strong> 2019-09-25 11:25:17</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:00.078024</p>
 <p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>:2 <span class="tj failCase">Failure</span>:1 <span class="tj">通过率</span>:66.7%</p>
 
 <p class='description'>用例执行情况:</p>
@@ -489,18 +489,19 @@ function hide_img(obj){
         </div>
         <pre>
         
-ft1.1.1: ============【Test_Leaguer_Level_Case测试用例开始】====================
+ft1.1.1: ============【test_leaguer_level_001_1测试用例开始】====================
 请求方法：post
-请求url：http://localhost:9999/Leaguer/DTOAddLeaguerLevel
+请求url：http://192.168.2.106:9999/Leaguer/DTOAddLeaguerLevel
 请求头：{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
 请求参数：{'LevelName': 'autoTest级别', 'RejoinMoney': '11', 'ChangeMoney': '33', 'SupplementCardMoney': '22', 'HeapcentlExpireTime': '1', 'IsMayUnjoin': 'true', 'UnJoinRate': '0', 'Summary': '', 'SecSupplementCardSujestPrice': '0.00', 'IsAllowEditSecSupplementPrice': 'true', 'SecChangeCardSujestPrice': '0.00', 'IsAllowEditSecChangePrice': 'true', 'SecCardPrice': '0.00', 'IsAllowEditSecCardPrice': 'true', 'IsSaveSecCardInfo': '', 'VerifyTimeUnit': '1', 'FreeMoneyExpireUnit': '', 'HeapcentlExpireUnit': '4', 'ID': '', 'CardType': '0', 'JoinCardType': '0'}
 响应信息:{"ResponseStatus":{"ErrorCode":"1003","Message":"该会员级别已经存在，请重新输入！"}}
-【用例运行时长】: 0.02554051500000004秒
-====================【Test_Leaguer_Level_Case测试用例结束】====================
+预期结果:{'ResponseStatus': {'ErrorCode': '0'}}
+【用例运行时长】:  0.02秒
+====================【test_leaguer_level_001_1测试用例结束】====================
 Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\Programs\youlebao_api\test_interface\test_leaguer_level_case.py", line 22, in test_leaguer_level_001
+  File "D:\Programs\youlebao_api\test_interface\test_leaguer_level_case.py", line 23, in test_leaguer_level_001
     assert json.loads(self.result.text) == eval(data['response'])
 AssertionError
 
@@ -539,17 +540,17 @@ AssertionError
         </div>
         <pre>
         
-pt1.2.1: ============【Test_Login_Case测试用例开始】====================
+pt1.2.1: ============【test_login_001_1测试用例开始】====================
 请求方法：post
-请求url：http://localhost:9999/DTOWebLogin
+请求url：http://192.168.2.106:9999/DTOWebLogin
 请求头：{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
 请求参数：{'UserName': 'admin', 'Password': 'YWRtaW4='}
 响应信息:{"ResponseStatus":{"ErrorCode":"0"}}
 实际结果：{'ResponseStatus': {'ErrorCode': '0'}}
 预期结果：{'ResponseStatus': {'ErrorCode': '0'}}
-更新cookies:&lt;RequestsCookieJar[&lt;Cookie ss-id=hTaDagGk8FBwOgjHYQLa for localhost.local/&gt;, &lt;Cookie ss-pid=1UvHTumyHUWLPd7Cz91h for localhost.local/&gt;]&gt;
-【用例运行时长】: 0.037131477999999996秒
-====================【Test_Login_Case测试用例结束】====================
+更新cookies:&lt;RequestsCookieJar[&lt;Cookie ss-id=dPvQ1mYWWOF5aD18LbNr for 192.168.2.106/&gt;, &lt;Cookie ss-pid=l9rzFw5dxauUGReSI0wX for 192.168.2.106/&gt;]&gt;
+【用例运行时长】:  0.04秒
+====================【test_login_001_1测试用例结束】====================
 
 
         </pre>
@@ -576,16 +577,16 @@ pt1.2.1: ============【Test_Login_Case测试用例开始】====================
         </div>
         <pre>
         
-pt1.2.2: ============【Test_Login_Case测试用例开始】====================
+pt1.2.2: ============【test_login_001_2测试用例开始】====================
 请求方法：post
-请求url：http://localhost:9999/DTOWebLogin
+请求url：http://192.168.2.106:9999/DTOWebLogin
 请求头：{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
 请求参数：{'UserName': 'admin', 'Password': 'MTIzNDU2'}
 响应信息:{"ResponseStatus":{"ErrorCode":"90002","Message":"用户密码错误"}}
 实际结果：{'ResponseStatus': {'ErrorCode': '90002', 'Message': '用户密码错误'}}
 预期结果：{'ResponseStatus': {'ErrorCode': '90002', 'Message': '用户密码错误'}}
-【用例运行时长】: 0.005545664000000006秒
-====================【Test_Login_Case测试用例结束】====================
+【用例运行时长】:  0.01秒
+====================【test_login_001_2测试用例结束】====================
 
 
         </pre>

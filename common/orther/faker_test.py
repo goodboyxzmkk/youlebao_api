@@ -6,8 +6,8 @@ fake = Faker(locale='zh_CN')
 # 地址类
 print("地址类".center(20, "-"))
 print(fake.address())  # 生成地址
-print(fake.street_address()) # 生成街道地址
-print(fake.street_name()) #生成街道名
+print(fake.street_address())  # 生成街道地址
+print(fake.street_name())  # 生成街道名
 print(fake.city_name(), fake.city())
 print(fake.province())
 

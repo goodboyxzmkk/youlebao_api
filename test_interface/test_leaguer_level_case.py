@@ -19,6 +19,7 @@ class Test_Leaguer_Level_Case(Base_Case):
         self.request.set_cookies(config_manage.read_cookies())
         self.result = self.request.send_request()
         assert str(self.result.status_code) == data['code']
+        print("预期结果:"+str(data['response']))
         assert json.loads(self.result.text) == eval(data['response'])
 
 

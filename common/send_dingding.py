@@ -1,4 +1,6 @@
 '''封装钉钉群发消息'''
+import base64
+
 import requests, json
 
 
@@ -27,12 +29,22 @@ def send_ding(message):
 
 
 def send_ding_url(message, file_url):
+    '''
+    钉钉机器人群发送图片
+    :param message: 显示标题
+    :param file_url: 显示图片地址
+    :return:
+    '''
     url = "https://oapi.dingtalk.com/robot/send?access_token=91a1f571187a08969a787ba29443c709c42ab62e10e4d30e5793d9c4387aeec8"
-    String_textMsg = {
+
+    with open(file_url, 'rb') as f:  # 二进制方式打开图文件
+        base64_data = base64.b64encode(f.read())  # 读取文件内容，转换为base64编码
+        bs64 = base64_data.decode()
+    my_data = {
         "msgtype": "markdown",
         "markdown": {
             "title": message,
-            "text": file_url
+            "text": "# 测试-{} ![](data:image/png;base64,{})".format(message, bs64)
         },
         "at": {
             "atMobiles": [
@@ -44,11 +56,12 @@ def send_ding_url(message, file_url):
     headers = {
         'Content-Type': 'application/json ;charset=utf-8'
     }
-    f = requests.post(url, data=json.dumps(String_textMsg), headers=headers)
+
+    f = requests.post(url, data=json.dumps(my_data).encode("utf-8"), headers=headers)
     if f.status_code == 200:
         return True
     else:
         return False
 
 if __name__ == '__main__':
-    send_ding("sorry,我是斯文人，女孩子这么粗鲁不好！嘻嘻")
+    send_ding("s")

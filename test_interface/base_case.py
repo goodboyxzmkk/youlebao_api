@@ -18,10 +18,10 @@ class Base_Case(unittest.TestCase):
         urllib3.disable_warnings()  # 去除警告
         warnings.simplefilter("ignore", ResourceWarning)
         self.start = time.perf_counter()
-        print("============【{}测试用例开始】====================".format(self.__class__.__name__))
+        print("============【{}测试用例开始】====================".format(self._testMethodName))
 
     def tearDown(self) -> None:
         self.end = time.perf_counter()
-        print('【用例运行时长】: {}秒'.format(self.end - self.start))
-        print("====================【{}测试用例结束】====================".format(self.__class__.__name__))
+        print('【用例运行时长】:  %.2f秒' % (self.end - self.start))
+        print("====================【{}测试用例结束】====================".format(self._testMethodName))
 

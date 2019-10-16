@@ -21,6 +21,5 @@ if __name__ == '__main__':
                                            retry=0, save_last_try=False)
     runner.run(suites)
     fp.close()
-    # send_ding_to_html("test")
     # send_ding("测试完成")
     # send_email.send_Email()

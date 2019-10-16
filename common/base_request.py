@@ -13,7 +13,7 @@ class Base_Request(object):
 
     def __init__(self, session, data):
         self.__session = session  # 保持会话s
-        self.data = json.loads(json.dumps(data))  # 先转json编码格式，再转json对象
+        self.data = json.loads(json.dumps(data, indent=2))  # 先转json编码格式，再转json对象,展开json格式，而不是显示一行数据
         self.cookies = None
         self.url = data["url"]
         self.headers = eval(data["headers"])
@@ -71,7 +71,8 @@ class Base_Request(object):
         try:
             print("请求头：{}".format(self.headers))
             print("请求参数：{}".format(testdata))
-            response = self.__session.post(url, data=testdata, cookies=global_cooikes, headers=self.headers, verify=False)
+            response = self.__session.post(url, data=testdata, cookies=global_cooikes, headers=self.headers,
+                                           verify=False)
             print("响应信息:{}".format(response.text))
             return response
         except Exception as e:
@@ -102,8 +103,6 @@ class Base_Request(object):
         if isinstance(dict_two, str):
             dict_two = json.loads(dict_two)
         return operator.eq(dict_one, dict_two)
-
-
 
 
 
